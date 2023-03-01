@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public static event Action<EnemyController> OnEnemyKilled;
+    
     [SerializeField] float health, maxHealth = 3f;
     [SerializeField] float moveSpeed = 5f;
     Rigidbody2D rb;
@@ -38,6 +38,12 @@ public class EnemyController : MonoBehaviour
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
     }
     // Update is called once per frame
-    public void TakeDamage(float damageAmount)
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Bullet"))
+        {
+            Destroy(gameObject);
+        }
+        
+    }
 }
