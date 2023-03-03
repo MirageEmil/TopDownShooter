@@ -13,7 +13,7 @@ public class EnemyController : MonoBehaviour
     Vector2 moveDirection;
 
 
-    }
+    
 
     // Start is called before the first frame update
     private void Start()
