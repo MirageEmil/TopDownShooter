@@ -43,6 +43,21 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-
+        if(transform.position.x < xLeft)
+        {
+            transform.position = new Vector2(xLeft, transform.position.y);
+        }
+        else if(transform.position.x > xRight)
+        {
+            transform.position = new Vector2(xRight, transform.position.y);
+        }
+        else if(transform.position.y < yBottom)
+        {
+            transform.position = new Vector2(yBottom, transform.position.x);
+        }
+        else if(transform.position.y > yTop)
+        {
+            transform.position = new Vector2(yTop, transform.position.x);
+        }
     }
 }
