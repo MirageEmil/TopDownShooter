@@ -11,6 +11,14 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rd;
     public SpriteRenderer sr;
 
+    public GameObject projectilePrefab;
+    public GameObject projectileSpawnPoint;
+
+    public float xRight;
+    public float xLeft;
+    public float yTop;
+    public float yBottom;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +34,15 @@ public class PlayerController : MonoBehaviour
 
         transform.Translate(Vector2.up * moveSpeed * verticalInput * Time.deltaTime);
         transform.Translate(Vector2.right * moveSpeed * horizontalInput * Time.deltaTime);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(projectilePrefab, projectileSpawnPoint.transform.position, projectileSpawnPoint.transform.rotation);
+        }
+    }
+
+    void Move()
+    {
+
     }
 }
