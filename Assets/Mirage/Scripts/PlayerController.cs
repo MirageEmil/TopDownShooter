@@ -39,10 +39,22 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(projectilePrefab, projectileSpawnPoint.transform.position, projectileSpawnPoint.transform.rotation);
         }
-    }
-
-    void Move()
-    {
-
+    
+        if(transform.position.x < xLeft)
+        {
+            transform.position = new Vector2(xLeft, transform.position.y);
+        }
+        else if(transform.position.x > xRight)
+        {
+            transform.position = new Vector2(xRight, transform.position.y);
+        }
+        else if(transform.position.y < yBottom)
+        {
+            transform.position = new Vector2(transform.position.x, yBottom);
+        }
+        else if(transform.position.y > yTop)
+        {
+            transform.position = new Vector2(transform.position.x, yTop);
+        }
     }
 }
