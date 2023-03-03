@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Space
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -1009530560, guid: 2d022561500de004cac6cfaba4c8deee, type: 3}
-  - {fileID: 1079254250, guid: 2d022561500de004cac6cfaba4c8deee, type: 3}
-  - {fileID: 39441945, guid: 2d022561500de004cac6cfaba4c8deee, type: 3}
-  - {fileID: 2056992108, guid: 2d022561500de004cac6cfaba4c8deee, type: 3}
+  - {fileID: 1324630475, guid: 5b53cf9f08d13994f88632f381068db8, type: 3}
+  - {fileID: -343322362, guid: 5b53cf9f08d13994f88632f381068db8, type: 3}
+  - {fileID: -1219318720, guid: 5b53cf9f08d13994f88632f381068db8, type: 3}
+  - {fileID: -1520730553, guid: 5b53cf9f08d13994f88632f381068db8, type: 3}
   m_MinSpeed: 6
   m_MaxSpeed: 6
   m_AnimationStartTime: 0
